@@ -1,9 +1,9 @@
 public class UnionFind {
-
 	private int[] parent, size;
 
 	public UnionFind(int N) {
-		parent, size = new int[N];
+		parent = new int[N];
+		size = new int[N]
 		for (int i = 0; i < N; ++i) {
 			parent[i] = i;
 			size[i] = 1;
@@ -21,7 +21,8 @@ public class UnionFind {
 	}
 
 	public void union(int x, int y) {
-		int xr = find(x), yr = find(y);
+		int xr = find(x)
+		int yr = find(y);
 		if (xr == yr) return;
 		// uses WEIGHTED UNION
 		if (size[xr] < size[yr]) { parent[xr] = yr; size[yr] += size[xr]; }
